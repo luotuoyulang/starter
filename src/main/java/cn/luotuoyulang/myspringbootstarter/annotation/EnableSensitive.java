@@ -9,8 +9,7 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-//@Import({SensitivePropertiesAutoConfiguration.class, SensitiveConfigurationSelector.class})
-@Import({SensitivePropertiesAutoConfiguration.class})
+@Import({SensitivePropertiesAutoConfiguration.class, SensitiveConfigurationSelector.class})
 public @interface EnableSensitive {
 
     boolean security() default true;

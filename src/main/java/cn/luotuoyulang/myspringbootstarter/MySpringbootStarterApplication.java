@@ -4,7 +4,7 @@ import cn.luotuoyulang.myspringbootstarter.annotation.EnableSensitive;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@EnableSensitive
+@EnableSensitive(packages = "cn.luotuoyulang")
 @SpringBootApplication
 public class MySpringbootStarterApplication {
 

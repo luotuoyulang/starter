@@ -1,6 +1,7 @@
 package cn.luotuoyulang.myspringbootstarter.selector;
 
 import cn.luotuoyulang.myspringbootstarter.annotation.EnableSensitive;
+import cn.luotuoyulang.myspringbootstarter.security.SecurityAutoConfiguration;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.annotation.AnnotationAttributes;
 import org.springframework.core.type.AnnotationMetadata;
@@ -21,9 +22,9 @@ public class SensitiveConfigurationSelector implements ImportSelector {
         boolean security = enableSensitive.getBoolean("security");
         boolean sensitive = enableSensitive.getBoolean("sensitive");
         List<String> configuration = new ArrayList<>(2);
-//        if (security) {
-//            configuration.add(SecurityAutoConfiguration.class.getName());
-//        }
+        if (security) {
+            configuration.add(SecurityAutoConfiguration.class.getName());
+        }
 //        if (sensitive) {
 //            configuration.add(SensitiveAutoConfiguration.class.getName());
 //        }
